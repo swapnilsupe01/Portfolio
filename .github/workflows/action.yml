@@ -1,0 +1,13 @@
+name: Build Success Check
+
+on: [push]
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout repo
+        uses: actions/checkout@v3
+
+      - name: Print Success Message
+        run: echo "Build successful! Push was successful."
